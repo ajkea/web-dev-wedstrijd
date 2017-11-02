@@ -1,0 +1,26 @@
+
+
+.homepage{
+    h1{
+        margin-bottom: 2em;
+    }
+    h2{
+    text-align: center;
+    }
+    p{
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .btn{
+        margin-right:0;
+        font-size: 1em;
+    }
+
+    .spotify{
+        color: lightgreen;
+        &:hover{
+            color: green;
+        }
+    }
+}
