@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/question', 'question@store');
+Route::get('/question', 'QuestionController@store');
 
 Auth::routes();
 
