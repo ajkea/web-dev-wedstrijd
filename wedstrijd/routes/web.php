@@ -17,10 +17,13 @@ Route::get('/', function () {
 
 Route::get('/list', 'QuestionController@index');
 
-// Route::get('/question', 'QuestionController@store');
+Route::get('/question', 'QuestionController@create');
 
-Route::post('/question', 'QuestionController@store')->name('question.create.post');
+Route::post('/question','QuestionController@store');
 
-Auth::routes();
+// Route::get('/question', 'QuestionController@validation');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// Auth::routes();
