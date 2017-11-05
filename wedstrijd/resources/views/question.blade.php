@@ -27,7 +27,7 @@
     <p>Zipcode:</p>
     <input type="text" name="zipcode" id="zipcode" value="{{ old('zipcode') }}" required>
 
-    <button type="submit" value="send" class="btn btn-primary">Send</button>
+    <button type="submit" value="send" class="btn btn-primary">SEND</button>
 </form>
 @if ($errors->any())
     <div class="alert alert-danger">

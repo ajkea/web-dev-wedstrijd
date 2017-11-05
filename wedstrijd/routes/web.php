@@ -26,9 +26,4 @@ Route::get('/question', 'QuestionController@create');
 
 Route::post('/question','QuestionController@store');
 
-// Route::get('/question', 'QuestionController@validation');
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
 // Auth::routes();

@@ -31,7 +31,7 @@ class QuestionController extends Controller
             'zipcode' => 'required|integer|between:1000,9992',
             'answer1' => 'required|string|max:50',
             'answer2' => 'required|integer',
-            'IPUser' => 'required|unique:users|ip',
+            // 'IPUser' => 'required|unique:users|ip',
         ]);
 
         $user = new User;
@@ -43,7 +43,7 @@ class QuestionController extends Controller
         $user->zipcode = $request->zipcode;
         $user->answer1 = $request->answer1;
         $user->answer2 = $request->answer2;
-        // $user->IPUser = \Request::ip();
+        $user->IPUser = \Request::ip();
         $user->save();
 
         return view('question');
