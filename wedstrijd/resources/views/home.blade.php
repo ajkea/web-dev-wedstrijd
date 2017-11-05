@@ -13,7 +13,7 @@
                     <h2 class="mb-4 mt-4">Win an exclusive meeting with Kanye West</h2>
                     <p class="mb-4">As music enthousiast we like to share the possibility for everyone to visit their biggest stars. This time we bring you the one and only Kanye West!</p>
                     <p><a class="btn btn-outline-secondary" href="/question" role="button">Click here to enter</a></p>
-                    <p>Thanks and goodluck from us at <a class="spotify" href="www.spotify.com">Spotify <i class="fab fa-spotify"></i></a></p>
+                    <p>Thanks and goodluck from us at <a class="spotify" href="http://www.spotify.com">Spotify <i class="fab fa-spotify"></i></a></p>
                 </div>
             </div>
         </div>

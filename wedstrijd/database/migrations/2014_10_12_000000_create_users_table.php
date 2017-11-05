@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->integer('zipcode');
             $table->string('answer1');
             $table->integer('answer2');
-            $table->string('IPUser');
+            $table->ipAddress('IPUser');
         });
     }
 
