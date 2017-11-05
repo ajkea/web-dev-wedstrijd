@@ -1,0 +1,21 @@
+.hero-image{
+    position: absolute;
+    top:0px;
+    img{
+    width:100%;
+    position: fixed;
+    display: block;
+    }
+    .image-slide{
+        // display: none;
+    }
+    .layer1{
+        z-index: 10;
+    }
+    .layer2{
+        z-index:9;
+    }
+    .layer3{
+        z-index:8;
+    }
+}

@@ -1,0 +1,19 @@
+.hero-image img {
+  width: 100%; }
+
+.homepage h1 {
+  margin-bottom: 2em; }
+.homepage h2 {
+  text-align: center; }
+.homepage p {
+  font-size: 1.2em;
+  text-align: center; }
+.homepage .btn {
+  margin-right: 0;
+  font-size: 1em; }
+.homepage .spotify {
+  color: lightgreen; }
+  .homepage .spotify:hover {
+    color: green; }
+
+/*# sourceMappingURL=main.css.map */

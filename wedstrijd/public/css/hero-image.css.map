@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAW;EACP,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAC,GAAG;EACP,eAAG;IACH,KAAK,EAAC,IAAI;IACV,QAAQ,EAAE,KAAK;IACf,OAAO,EAAE,KAAK;EAKd,mBAAO;IACH,OAAO,EAAE,EAAE;EAEf,mBAAO;IACH,OAAO,EAAC,CAAC;EAEb,mBAAO;IACH,OAAO,EAAC,CAAC",
+"sources": ["sass/hero-image.scss"],
+"names": [],
+"file": "hero-image.css"
+}

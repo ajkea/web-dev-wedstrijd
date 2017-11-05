@@ -19,22 +19,9 @@ class QuestionController extends Controller
         return view('question');
     }
 
-    public function validation(Request $request)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:50',
-            'email' => 'required|email|unique:users,email|max:80|unique:users',
-            'street' => 'required|string|max:50',
-            'streetnumber' => 'required|integer|between:1,999',
-            'town' => 'required|string|max:30',
-            'zipcode' => 'required|integer|between:1000,9992',
-            'answer1' => 'required|string|max:50',
-            'answer2' => 'required|integer',
-        ]);
-    }
-
     public function store(Request $request)
     {
+        $request->merge(['IPUser' => $_SERVER['REMOTE_ADDR']]);
         $this->validate(request(),[
             'name' => 'required|string|max:50',
             'email' => 'required|email|unique:users,email|max:80|unique:users',
@@ -44,6 +31,7 @@ class QuestionController extends Controller
             'zipcode' => 'required|integer|between:1000,9992',
             'answer1' => 'required|string|max:50',
             'answer2' => 'required|integer',
+            'IPUser' => 'required|unique:users|ip',
         ]);
 
         $user = new User;
@@ -55,7 +43,7 @@ class QuestionController extends Controller
         $user->zipcode = $request->zipcode;
         $user->answer1 = $request->answer1;
         $user->answer2 = $request->answer2;
-        $user->IPUser = \Request::ip();
+        // $user->IPUser = \Request::ip();
         $user->save();
 
         return view('question');

@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::get('/concept', function () {
+    return view('concept');
+});
+
 Route::get('/list', 'QuestionController@index');
 
 Route::get('/question', 'QuestionController@create');
