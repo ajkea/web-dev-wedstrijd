@@ -12,7 +12,7 @@ class selectWinner extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'do:selectWinner';
 
     /**
      * The console command description.
@@ -38,6 +38,11 @@ class selectWinner extends Command
      */
     public function handle()
     {
-        
+        // $winner = DB::table('users')->select('id as user_id','name','answer2','created_at','updated_at')
+        // ->whereBetween('created_at',[now(),'2017-11-08'])
+        // ->OrderByRaw(ABS('answer2' - 60))
+        // ->take('5')
+        // ->get();
+        // echo $winner;
     }
 }

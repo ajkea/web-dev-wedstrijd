@@ -21,6 +21,8 @@ class UsersTableSeeder extends Seeder
             'answer1' => 'Graduation',
             'answer2' => random_int(1,999),
             'IPUser' => '192.138.0.12',
+            'created_at' => date('d-m-Y'),
+            'updated_at' => date('d-m-Y'),
         ]);
     }
 }
