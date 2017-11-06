@@ -12,14 +12,14 @@ class selectWinner extends Command
      *
      * @var string
      */
-    protected $signature = 'do:selectWinner';
+    protected $signature = 'do:selectwinner';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Select a winner from the competition';
+    protected $description = 'SelectWinner';
 
     /**
      * Create a new command instance.
