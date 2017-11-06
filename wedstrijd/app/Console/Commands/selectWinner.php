@@ -38,9 +38,10 @@ class selectWinner extends Command
      */
     public function handle()
     {
-        $winner = DB::table('users')->select('id as user_id','name','answer2','created_at','updated_at')
+        $winner = DB::table('users')->select('id as user_id','name','answer1','answer2','created_at','updated_at')
         ->whereBetween('created_at',[date('Ymd',strtotime('-1 day')),now()])
-        // ->OrderBy(ABS('answer2' - 60))
+        ->where(DB::raw('LOWER(answer1)'),'like','graduation')
+        ->OrderBy(DB::raw('abs(answer2 -60)'))
         // ->take('5')
         // ->get();
         ->first();
