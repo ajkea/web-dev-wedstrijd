@@ -42,18 +42,13 @@ class selectWinner extends Command
         ->whereBetween('created_at',[date('Ymd',strtotime('-1 day')),now()])
         ->where(DB::raw('LOWER(answer1)'),'like','graduation')
         ->OrderBy(DB::raw('abs(answer2 -60)'))
-        // ->take('5')
-        // ->get();
+        ->whereNull('users.deleted_at')
         ->first();
-        // echo $winner->user_id;
+
         DB::table('winners')->insertGetId([
             'user_id' => $winner->user_id,
-            // 'name' => $winner->name,
-            // 'answer2' => $winner->answer2,
             'created_at' => $winner->created_at,
             'updated_at' => $winner->updated_at,
-            // 'period' => '1', //periode = winner_id
         ]);
-        echo $winner->user_id;
     }
 }

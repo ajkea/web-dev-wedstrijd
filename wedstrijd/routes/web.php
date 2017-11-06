@@ -23,6 +23,7 @@ Route::get('/concept', function () {
 Route::get('/list', 'QuestionController@index');
 Route::get('/question', 'QuestionController@create');
 Route::post('/question','QuestionController@store');
+Route::get('/list/delete/{user_id}','QuestionController@destroy');
 
 Route::get('/winner', 'WinnerController@index');
 

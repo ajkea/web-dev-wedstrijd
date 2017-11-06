@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@include('layouts.app')
 <table class="table">
     <tr>
         <th>Periode</th>

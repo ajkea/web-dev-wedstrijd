@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('answer1');
             $table->integer('answer2');
             $table->ipAddress('IPUser');
+            $table->softDeletes();
         });
     }
 

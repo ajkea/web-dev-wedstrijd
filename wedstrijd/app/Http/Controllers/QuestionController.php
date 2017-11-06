@@ -10,7 +10,8 @@ class QuestionController extends Controller
     public function index()
     {
         
-        $users = \DB::table('users')->get();
+        $users = \DB::table('users')
+        ->whereNull('deleted_at')->get();
         
         return view('list', ['users' => $users]);
     }
@@ -47,5 +48,12 @@ class QuestionController extends Controller
         $user->save();
 
         return view('question');
+    }
+
+    public function destroy($user_id){
+        $user = User::where('id',$user_id);
+        $user->delete();
+
+        return view('home');
     }
 }

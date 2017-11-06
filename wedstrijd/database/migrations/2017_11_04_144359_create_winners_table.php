@@ -13,14 +13,16 @@ class CreateWinnersTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('winners');
         Schema::create('winners', function (Blueprint $table) {
-            $table->integer('winner_id');
+            $table->increments('winner_id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade');
             $table->timestamps();
-            $table->increments('period')->change();
+            $table->increments('period')
+            ->change();
             
         });
     }

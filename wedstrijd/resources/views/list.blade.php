@@ -11,6 +11,7 @@
             <th>Main answer</th>
             <th>Tiebreaker answer</th>
             <th>IP user</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +24,7 @@
         <td>{{ $user->answer1 }}</td>
         <td>{{ $user->answer2 }}</td>
         <td>{{ $user->IPUser }}</td>
+        <td><a href="list/delete/{{ $user->id }}">Delete</a></td>
     </tr
     @endif
     @endforeach
