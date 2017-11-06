@@ -15,7 +15,7 @@
     </thead>
     <tbody>
     @foreach ($users as $user)
-    @if($user->answer1 == 'Graduation') 
+    @if(strtolower($user->answer1) == 'graduation') 
     <tr>
         <td>{{ $user->id }}</td>
         <td>{{ $user->name }}</td>
@@ -43,7 +43,7 @@
     </thead>
     <tbody>
     @foreach ($users as $user)
-    @if($user->answer1 !== 'Graduation') 
+    @if(strtolower($user->answer1) !== 'graduation') 
     <tr>
         <td>{{ $user->id }}</td>
         <td>{{ $user->name }}</td>

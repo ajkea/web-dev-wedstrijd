@@ -20,7 +20,7 @@ class CreateWinnersTable extends Migration
                 ->references('id')->on('users')
                 ->onDelete('cascade');
             $table->timestamps();
-            $table->increments('period');
+            $table->increments('period')->change();
             
         });
     }

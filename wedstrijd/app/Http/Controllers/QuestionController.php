@@ -21,7 +21,7 @@ class QuestionController extends Controller
 
     public function store(Request $request)
     {
-        $request->merge(['IPUser' => $_SERVER['REMOTE_ADDR']]);
+        $request->merge(['IPUser' => \Request::ip()]);
         $this->validate(request(),[
             'name' => 'required|string|max:50',
             'email' => 'required|email|unique:users,email|max:80|unique:users',

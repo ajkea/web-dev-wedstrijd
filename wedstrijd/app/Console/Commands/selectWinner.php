@@ -51,7 +51,7 @@ class selectWinner extends Command
             // 'answer2' => $winner->answer2,
             'created_at' => $winner->created_at,
             'updated_at' => $winner->updated_at,
-            'period' => '1',
+            // 'period' => '1', //periode = winner_id
         ]);
         echo $winner->user_id;
     }
