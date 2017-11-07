@@ -50,5 +50,13 @@ class selectWinner extends Command
             'created_at' => $winner->created_at,
             'updated_at' => $winner->updated_at,
         ]);
+
+        
+      $users = User::all();
+      \Excel::create('Participants - '.date('dmY'), function($excel) use($users) {
+          $excel->sheet('ExportFile', function($sheet) use($users) {
+              $sheet->fromArray($users);
+          });
+      })->store('xls', storage_path('excel/exports'));
     }
 }

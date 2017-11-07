@@ -56,4 +56,14 @@ class QuestionController extends Controller
 
         return redirect('list');
     }
+
+        public function export(){
+      $users = User::all();
+      \Excel::create('Participants', function($excel) use($users) {
+          $excel->sheet('ExportFile', function($sheet) use($users) {
+              $sheet->fromArray($users);
+          });
+      })->export('xls');
+
+    }
 }

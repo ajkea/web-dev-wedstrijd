@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('do:selectwinner')->everyMinute();
+        $schedule->command('do:selectwinner')->Daily();
     }
 
     /**

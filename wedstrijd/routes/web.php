@@ -21,9 +21,11 @@ Route::get('/concept', function () {
 });
 
 Route::get('/list', 'QuestionController@index');
+Route::get('/list/delete/{user_id}','QuestionController@destroy');
+Route::get('/list/export', 'QuestionController@export');
+
 Route::get('/question', 'QuestionController@create');
 Route::post('/question','QuestionController@store');
-Route::get('/list/delete/{user_id}','QuestionController@destroy');
 
 Route::get('/winners', 'WinnerController@index');
 

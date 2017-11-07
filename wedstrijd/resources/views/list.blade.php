@@ -3,6 +3,9 @@
 <div class="container">
     <div class="row justify-center">
     <h2>Deelnemers die juist antwoorden</h2>
+    <form action="{{url('list/export')}}" enctype="multipart/form-data">
+        <button class="btn btn-success" type="submit">Export</button>
+    </form>
     <table class="table">
     <thead>
         <tr>
