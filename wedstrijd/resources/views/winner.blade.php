@@ -1,4 +1,5 @@
-@include('layouts.app')
+@extends('layouts.app')
+@section('content')
 <table class="table">
     <tr>
         <th>Periode</th>
@@ -15,3 +16,4 @@
         </tr
 @endforeach
 </table>
+@endsection

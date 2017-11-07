@@ -1,4 +1,5 @@
-@include('layouts.app')
+@extends('layouts.app')
+@section('content')
 <div class="container">
     <div class="row justify-center">
     <h2>Deelnemers die juist antwoorden</h2>
@@ -60,3 +61,4 @@
 </table>
 </div>
 </div>
+@endsection

@@ -54,6 +54,6 @@ class QuestionController extends Controller
         $user = User::where('id',$user_id);
         $user->delete();
 
-        return view('home');
+        return redirect('list');
     }
 }

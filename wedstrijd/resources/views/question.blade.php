@@ -1,5 +1,6 @@
 @extends('layouts.app')
-    <form class="form-horizontal"  method="POST" action="">
+@section('content')
+    <form method="POST" action="">
     {{ csrf_field() }}
 
     <p>What is the name of Kanye West's' album after graduation?</p>
@@ -9,24 +10,29 @@
     <input type="text" name="answer2" id="answer2" value="{{ old('answer2') }}" required>
 
     <h3>Now some basic information so we know how to contact you if you win :)</h3>
+
+    <div class="form-group row">
     <p>Full Name:</p>
     <input type="text" name="name" id="name" value="{{ old('name') }}" required>
-
+    </div>
+    <div class="form-group row">
     <p>Email:</p>
     <input type="text" name="email" id="email" value="{{ old('email') }}" required>
-
+    </div>
+    <div class="form-group row">  
     <p>Street:</p>
     <input type="text" name="street" id="street" value="{{ old('street') }}" required>
-
     <p>Number:</p>
     <input type="text" name="streetnumber" id="streetnumber" value="{{ old('streetnumber') }}" required>
-
+    </div>
+    <div class="form-group row">
     <p>Town:</p>
     <input type="text" name="town" id="town" value="{{ old('town') }}" required>
-
+    </div>
+    <div class="form-group row">
     <p>Zipcode:</p>
     <input type="text" name="zipcode" id="zipcode" value="{{ old('zipcode') }}" required>
-
+    </div>
     <button type="submit" value="send" class="btn btn-primary">SEND</button>
 </form>
 @if ($errors->any())
@@ -38,3 +44,4 @@
         </ul>
     </div>
 @endif
+@endsection

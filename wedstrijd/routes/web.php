@@ -25,6 +25,6 @@ Route::get('/question', 'QuestionController@create');
 Route::post('/question','QuestionController@store');
 Route::get('/list/delete/{user_id}','QuestionController@destroy');
 
-Route::get('/winner', 'WinnerController@index');
+Route::get('/winners', 'WinnerController@index');
 
 // Auth::routes();
