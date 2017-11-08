@@ -31,7 +31,7 @@
     @include('layouts.header')
     <div class="container">
         @yield('content')
-        </div>
+    </div>
     @include('layouts.footer')
     </div>
     <!--Scripts-->

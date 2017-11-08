@@ -1,11 +1,12 @@
 @extends('layouts.app')
 @section('content')
 <div class="container list">
-    <div class="row justify-center">
-    <h2>Deelnemers die juist antwoorden</h2>
+    <h2>Download the list of participants to an excel spreadsheet:</h2>
     <form action="{{url('list/export')}}" enctype="multipart/form-data">
         <button class="btn btn-success" type="submit">Export</button>
     </form>
+    <div class="row justify-center">
+    <h2>Deelnemers die juist antwoorden</h2>
     <table class="table table-dark table-hover">
     <thead>
         <tr>

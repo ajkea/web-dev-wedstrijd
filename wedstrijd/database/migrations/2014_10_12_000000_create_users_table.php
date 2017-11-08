@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('answer1')->nullable();
             $table->integer('answer2')->nullable();
             $table->string('artist')->nullable();
-            $table->ipAddress('IPUser');
+            $table->ipAddress('IPUser')->nullable();
             $table->softDeletes();
         });
     }

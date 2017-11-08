@@ -30,6 +30,9 @@
             <li class="nav-item"><a class="nav-item nav-link" href="/list"><i class="fa fa-list"></i> List participants</a></li>
             <li class="nav-item"><a class="nav-item nav-link" href="{{route('logout')}}">Logout</a></li>
             @endauth
+            @guest
+            <li class="nav-item"><a class="nav-item nav-link" href="{{route('login')}}">Login</a></li>
+            @endguest
         </ul>
   </div>
 </div>

@@ -3,19 +3,25 @@
 <div class="container question">
     <div class="col-xs-12 col-sm-12 col-md-6">
         <h1>Participation form</h1>
-        <h3>Answer those 2 questions and make a chance to win a meet & greet with Kanye West</h3>
+        <h3>Answer those 2 questions and make a chance to win a meet & greet with your favorite artist</h3>
         <form method="POST" action="">
         {{ csrf_field() }}
         
         <h5>Which artist do you want to meet?</h5>
-        <input name="artistRadios" type="radio" value="Kanye West">Kanye West
+        <label>
+        <input name="artistRadios" type="radio" value="Kanye West" checked="checked">Kanye West
+        </label>
+        <label>
         <input name="artistRadios" type="radio" value="Taylor Swift">Taylor Swift
+        </label>
+        <label>
         <input name="artistRadios" type="radio" value="Coldplay">Coldplay
-    
-        <h5>What is the name of Kanye West's' album after graduation?</h5>
+        </label>
+        
+        <h5>What is the name of Kanye West's album after "Late Registration"?</h5>
         <input type="text" name="answer1" id="answer1" value="{{ old('answer1') }}" required>
 
-        <h5>How many times does Kanye West say "Kanye" in his song "I love Kanye" ?</h5>
+        <h5>How many animals appear in the short-film <a href="https://www.youtube.com/watch?v=Jg5wkZ-dJXA" target="_blank">"Runaway"</a>?</h5>
         <input type="text" name="answer2" id="answer2" value="{{ old('answer2') }}" required>
 
         <h3>Contact information:</h3>

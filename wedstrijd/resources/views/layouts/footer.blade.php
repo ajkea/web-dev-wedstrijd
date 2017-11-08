@@ -25,7 +25,7 @@
     </ul>
 </div>
 
-<div class="col-xs-6 col-sm-4 col-md-2">
+<div class="col-xs-6 col-sm-4 col-md-3">
     <h3 class="nav-title">Communities</h3>
     <ul class="nav">      
 <li>
@@ -55,7 +55,7 @@
     </ul>
 </div>
 
-<div class="col-xs-12 col-md-4 col-social">
+<div class="col-xs-12 col-md-3 col-social">
     <li>
         <a href="http://instagram.com/spotify">
             <i class="fab fa-instagram fa-2x"></i>

@@ -11,6 +11,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        $artists=['Kanye West','Taylor Swift','Coldplay'];
+        foreach ($artists as $artist){
         DB::table('users')->insert([
             'name' => str_random(10),
             'email' => str_random(10).'@gmail.com',
@@ -20,10 +22,11 @@ class UsersTableSeeder extends Seeder
             'zipcode' => random_int(1000,9999),
             'answer1' => 'Graduation',
             'answer2' => random_int(1,165),
-            'artist' => 'Kanye West',
+            'artist' => $artist,
             'IPUser' => '192.138.0.12',
-            'created_at' => now(),
-            'updated_at' => now(),
+            'created_at' => date('Ymd',strtotime('+3 day')),
+            'updated_at' => date('Ymd',strtotime('+3 day')),
         ]);
+        }
     }
 }

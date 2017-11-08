@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <h1>Winners competition:</h1>
+    <div class="artist-winners">
     <h2>Coldplay</h2>
 <table class="table table-dark">
     <tr>
@@ -13,7 +14,7 @@
 @foreach ($users as $user)
 @if($user->artist == 'Coldplay')
     <tr>
-        <td>{{ $user->winner_id }}</td>
+        <td>{{ ceil($user->winner_id/3) }}</td>
         <td>{{ $user->name }}</td>
         <td>{{ $user->answer1 }}</td>
         <td>{{ $user->answer2 }}</td>
@@ -22,6 +23,8 @@
 @endif
 @endforeach
 </table>
+</div>
+<div class="artist-winners">
 <h2>Taylor Swift</h2>
 <table class="table table-dark">
     <tr>
@@ -34,7 +37,7 @@
 @foreach ($users as $user)
 @if($user->artist == 'Taylor Swift')
     <tr>
-        <td>{{ $user->winner_id }}</td>
+        <td>{{ ceil($user->winner_id/3) }}</td>
         <td>{{ $user->name }}</td>
         <td>{{ $user->answer1 }}</td>
         <td>{{ $user->answer2 }}</td>
@@ -43,6 +46,8 @@
 @endif
 @endforeach
 </table>
+</div>
+<div class="artist-winners">
 <h2>Kanye West</h2>
 <table class="table table-dark">
     <tr>
@@ -55,7 +60,7 @@
 @foreach ($users as $user)
 @if($user->artist == 'Kanye West')
     <tr>
-        <td>{{ $user->winner_id }}</td>
+        <td>{{ ceil($user->winner_id/3) }}</td>
         <td>{{ $user->name }}</td>
         <td>{{ $user->answer1 }}</td>
         <td>{{ $user->answer2 }}</td>
@@ -63,4 +68,5 @@
     </tr
 @endif
 @endforeach
+</div>
 @endsection
