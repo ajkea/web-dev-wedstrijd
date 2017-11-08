@@ -2,9 +2,6 @@
 @section('content')
     <section class="homepage">
             <div class="row justify-center">
-            <div class="col-md-12 text-center">
-                <h1>Competition time baby</h1>
-        </div>
                 <div class="col-md-6 text-center">
                     <img class="mb-4 img-fluid" src="https://i.imgur.com/5xthSad.png" >
                 </div>

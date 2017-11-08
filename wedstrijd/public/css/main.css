@@ -12,16 +12,30 @@
   .hero-image .layer3 {
     z-index: 8; }
 
-.header ul li a {
-  color: #111111; }
-  .header ul li a:hover {
-    color: #777777;
-    background-color: white; }
+body {
+  font-size: 1.4em;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.header .navbar-light .navbar-nav .nav-link {
+  color: white;
+  padding-left: 1em; }
+  .header .navbar-light .navbar-nav .nav-link:hover {
+    color: #ddd; }
+.header .navbar-light .navbar-toggler {
+  background-color: #555; }
+.header nav {
+  color: white;
+  font-size: 1.2em;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .header nav .navbar-brand {
+    padding-top: .5em; }
 
 .footer {
   background-color: #000;
   margin-top: 4em;
-  padding-top: 4em; }
+  padding-top: 4em;
+  padding-bottom: 2em;
+  font-size: 1.2em; }
   .footer a {
     color: white; }
   .footer .col-social li {
@@ -29,7 +43,7 @@
     padding: .5em;
     text-align: right; }
   .footer .footer-logo {
-    font-size: 2em; }
+    font-size: 1.5em; }
     .footer .footer-logo a:hover {
       text-decoration: none; }
   .footer .row.row-small {
@@ -55,6 +69,7 @@
   border: none;
   border-radius: 500px;
   padding: 18px 48px 16px;
+  margin: 2em 0 2em 0;
   background-color: #1db954; }
   .homepage .btn:hover {
     background-color: #1ed760; }
@@ -72,7 +87,9 @@
   .question form p {
     font-size: 1em; }
   .question form input {
-    width: 100%; }
+    width: 100%;
+    padding: .2em;
+    margin-bottom: 1em; }
 .question .column-2 img {
   width: 100%;
   padding-top: 1em;
