@@ -20,7 +20,7 @@ Route::get('/concept', function () {
     return view('concept');
 });
 
-Route::get('/list', 'QuestionController@index');
+Route::get('/list', 'QuestionController@index')->middleware('auth');
 Route::get('/list/delete/{user_id}','QuestionController@destroy');
 Route::get('/list/export', 'QuestionController@export');
 
@@ -29,4 +29,5 @@ Route::post('/question','QuestionController@store');
 
 Route::get('/winners', 'WinnerController@index');
 
-// Auth::routes();
+Auth::routes();
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

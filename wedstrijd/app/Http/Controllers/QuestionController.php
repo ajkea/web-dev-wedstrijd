@@ -45,9 +45,10 @@ class QuestionController extends Controller
         $user->answer1 = $request->answer1;
         $user->answer2 = $request->answer2;
         $user->IPUser = \Request::ip();
+        // $user->password = str_random(10);
         $user->save();
 
-        return view('question');
+        return view('home');
     }
 
     public function destroy($user_id){
@@ -59,7 +60,7 @@ class QuestionController extends Controller
 
         public function export(){
       $users = User::all();
-      \Excel::create('Participants', function($excel) use($users) {
+      \Excel::create('Participants - '.date('d-m-Y'), function($excel) use($users) {
           $excel->sheet('ExportFile', function($sheet) use($users) {
               $sheet->fromArray($users);
           });

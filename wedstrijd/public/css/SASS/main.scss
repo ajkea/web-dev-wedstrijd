@@ -86,6 +86,47 @@ $spotify-light-green: #1ed760;
     }
 }
 
-.questionpage{
-    
+.question{
+    form{
+        border: 2px solid #222;
+        border-radius: 20px;
+        padding: 1em;
+        margin-top: 2em;
+        p{
+            font-size: 1em;
+        }
+        input{
+            width: 100%;
+        }
+    }
+    .column-2{
+        img{
+            width: 100%;
+            padding-top: 1em;
+            border-radius: 2em;
+        }
+    }
+}
+
+.list{
+    td.delete{
+        text-align: center;
+        width: 1em;
+    }
+}
+
+.table.table-dark{
+    background-color: #222;
+    color: #eee;
+    tr{
+        td{
+        border-bottom: 2px solid #333;
+        }
+    }
+    a{
+        color: #777;
+        &:hover{
+            color: #eee;
+        }
+    }
 }

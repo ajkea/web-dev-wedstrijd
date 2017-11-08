@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<table class="table">
+<!-- <div class="container"> -->
+<table class="table table-dark">
     <tr>
         <th>Periode</th>
         <th>Naam winnaar</th>
@@ -13,7 +14,8 @@
         <td>{{ $user->name }}</td>
         <td>{{ $user->answer1 }}</td>
         <td>{{ $user->answer2 }}</td>
-        </tr
+    </tr
 @endforeach
 </table>
+<!-- </div> -->
 @endsection

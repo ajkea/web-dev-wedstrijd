@@ -64,4 +64,32 @@
   .homepage .spotify:hover {
     color: green; }
 
+.question form {
+  border: 2px solid #222;
+  border-radius: 20px;
+  padding: 1em;
+  margin-top: 2em; }
+  .question form p {
+    font-size: 1em; }
+  .question form input {
+    width: 100%; }
+.question .column-2 img {
+  width: 100%;
+  padding-top: 1em;
+  border-radius: 2em; }
+
+.list td.delete {
+  text-align: center;
+  width: 1em; }
+
+.table.table-dark {
+  background-color: #222;
+  color: #eee; }
+  .table.table-dark tr td {
+    border-bottom: 2px solid #333; }
+  .table.table-dark a {
+    color: #777; }
+    .table.table-dark a:hover {
+      color: #eee; }
+
 /*# sourceMappingURL=main.css.map */

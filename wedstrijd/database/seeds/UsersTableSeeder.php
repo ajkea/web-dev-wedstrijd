@@ -19,10 +19,10 @@ class UsersTableSeeder extends Seeder
             'town' => str_random(10),
             'zipcode' => random_int(1000,9999),
             'answer1' => 'Graduation',
-            'answer2' => '59',
+            'answer2' => random_int(1,165),
             'IPUser' => '192.138.0.12',
-            'created_at' => date('Ymd',strtotime('-1 hour')),
-            'updated_at' => date('Ymd',strtotime('-1 hour')),
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }

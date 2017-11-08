@@ -96,10 +96,7 @@
         <a class="market" href="/be-nl/select-your-country/" title="Klik om te wijzigen">
         <div class="media">
             <div class="media-body media-middle">
-                Engelish (Belgium)
-            </div>
-            <div class="media-right media-middle">
-                <span class="media-object flag-icon flag-icon-be-nl"></span>
+                English (Belgium)
             </div>
         </div>
         </a>
