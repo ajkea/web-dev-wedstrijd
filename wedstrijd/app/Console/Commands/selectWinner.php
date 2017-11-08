@@ -38,9 +38,13 @@ class selectWinner extends Command
      */
     public function handle()
     {
-        $winner = DB::table('users')->select('id as user_id','name','answer1','answer2','created_at','updated_at')
+        //loop door artiesten om per artiest 1 winnaar te kiezen
+        $artists=['Kanye West','Taylor Swift','Coldplay'];
+        foreach ($artists as $artist){
+        $winner = DB::table('users')->select('id as user_id','name','answer1','answer2','created_at','updated_at','artist')
         ->whereBetween('created_at',[date('Ymd',strtotime('-1 day')),now()])
         ->where(DB::raw('LOWER(answer1)'),'like','graduation')
+        ->where('artist','like',$artist)
         ->OrderBy(DB::raw('abs(answer2 -60)'))
         ->whereNull('users.deleted_at')
         ->first();
@@ -50,9 +54,9 @@ class selectWinner extends Command
             'created_at' => $winner->created_at,
             'updated_at' => $winner->updated_at,
         ]);
+        }
 
-        
-      $users = User::all();
+        $users = User::all();
       \Excel::create('Participants - '.date('dmY'), function($excel) use($users) {
           $excel->sheet('ExportFile', function($sheet) use($users) {
               $sheet->fromArray($users);

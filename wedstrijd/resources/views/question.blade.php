@@ -6,7 +6,12 @@
         <h3>Answer those 2 questions and make a chance to win a meet & greet with Kanye West</h3>
         <form method="POST" action="">
         {{ csrf_field() }}
-
+        
+        <h5>Which artist do you want to meet?</h5>
+        <input name="artistRadios" type="radio" value="Kanye West">Kanye West
+        <input name="artistRadios" type="radio" value="Taylor Swift">Taylor Swift
+        <input name="artistRadios" type="radio" value="Coldplay">Coldplay
+    
         <h5>What is the name of Kanye West's' album after graduation?</h5>
         <input type="text" name="answer1" id="answer1" value="{{ old('answer1') }}" required>
 

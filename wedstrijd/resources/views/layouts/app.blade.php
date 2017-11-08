@@ -32,8 +32,8 @@
     <div class="container">
         @yield('content')
         </div>
-    </div>
     @include('layouts.footer')
+    </div>
     <!--Scripts-->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>

@@ -45,6 +45,7 @@ class QuestionController extends Controller
         $user->answer1 = $request->answer1;
         $user->answer2 = $request->answer2;
         $user->IPUser = \Request::ip();
+        $user->artist = $request->artistRadios;
         // $user->password = str_random(10);
         $user->save();
 

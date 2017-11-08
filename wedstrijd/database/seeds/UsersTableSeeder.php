@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
             'zipcode' => random_int(1000,9999),
             'answer1' => 'Graduation',
             'answer2' => random_int(1,165),
+            'artist' => 'Kanye West',
             'IPUser' => '192.138.0.12',
             'created_at' => now(),
             'updated_at' => now(),
